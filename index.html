@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="¡Realiza cálculos básicos al instante!
+    Nuestra sencilla calculadora web te ayuda a resolver sumas, restas,
+    multiplicaciones y divisiones en un abrir y cerrar de ojos. Ahorra tiempo y
+    obtén resultados precisos con nuestra herramienta fácil de usar.">
+    <link
+      rel="shortcut icon"
+      href="./Icon/icons8-calculadora-32.png"
+      type="image/x-icon"
+    />
+    <link id="css" rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- CODIGO DEL BOTON DE CAMBIAR EL THEMA -->
+    <label onclick="changeTheme()" for="theme" class="theme">
+      <span class="theme__toggle-wrap">
+        <input
+          id="theme"
+          class="theme__toggle"
+          type="checkbox"
+          role="switch"
+          name="theme"
+          value="dark"
+        />
+        <span class="theme__fill"></span>
+        <span class="theme__icon">
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+        </span>
+      </span>
+    </label>
+    <!--CONTENEDOR DE LA CALCULADORA-->
+
+    <div class="container" id="container">
+      <!-- SECCION DE LA PANTALLA DE LA CALCULADORA -->
+      <section class="pantalla">
+        <input id="pantalla" type="text" readonly />
+      </section>
+
+      <!-- CONTENEDOR DE LOS BOTONES DE LA CALCULADORA -->
+      <div class="botones">
+        <section class="sect1">
+          <button id="b" onclick="borrar()"><p class="rojo">C</p></button>
+          <button id="b1" onclick="deleteChar()">
+            <img src="./Icon/icons8-símbolo-vaciar-48.png" alt="borrar" />
+          </button>
+          <button id="b2" onclick="addNumero('%')">
+            <p class="verde">%</p>
+          </button>
+          <button id="b3" onclick="addNumero('/')">
+            <p class="verde">/</p>
+          </button>
+        </section>
+
+        <section class="sect2">
+          <button id="b4" onclick="addNumero('7')"><p>7</p></button>
+          <button id="b5" onclick="addNumero('8')"><p>8</p></button>
+          <button id="b6" onclick="addNumero('9')"><p>9</p></button>
+          <button id="b7" onclick="addNumero('*')">
+            <p class="verde">*</p>
+          </button>
+        </section>
+        <section class="sect3">
+          <button id="b8" onclick="addNumero('4')"><p>4</p></button>
+          <button id="b9" onclick="addNumero('5')"><p>5</p></button>
+          <button id="b10" onclick="addNumero('6')"><p>6</p></button>
+          <button id="b11" onclick="addNumero('-')">
+            <p class="verde">-</p>
+          </button>
+        </section>
+        <section class="sect4">
+          <button id="b12" onclick="addNumero('1')"><p>1</p></button>
+          <button id="b13" onclick="addNumero('2')"><p>2</p></button>
+          <button id="b14" onclick="addNumero('3')"><p>3</p></button>
+          <button id="b15" onclick="addNumero('+')">
+            <p class="verde">+</p>
+          </button>
+        </section>
+        <section class="sect5">
+          <button id="bi" onclick="colorTheme()"></button>
+          <button id="b16" onclick="addNumero('0')"><p>0</p></button>
+          <button id="b17" onclick="addNumero('.')"><p>.</p></button>
+          <button id="fondoVerde"><p>=</p></button>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
